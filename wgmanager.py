@@ -403,9 +403,9 @@ def main():
     args = parser.parse_args()
 
     # setup logger
-    logging.basicConfig(format='[%(levelname)s] %(message)s', level=logging.INFO)
+    logging.basicConfig(format='[%(levelname)s] %(message)s')
     if args.verbose:
-        logging.getLogger().setLevel(logging.DEBUG)
+        logging.getLogger().setLevel(logging.INFO)
 
     if not check_requirements():
         exit(1)
